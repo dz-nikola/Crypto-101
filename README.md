@@ -7,6 +7,17 @@ Whether you are a complete beginner or have some familiarity with crypto, we bel
 *This project is part of the course "Skills: Programming - advance level" by Mario Silic at the University of St. Gallen.*
 
 ## Table of contents
+- [General Information](#general-information)
+- [Technologies](#technologies)
+- [Program Structure](#program-structure)
+  - [1 - Web Scraping](#1---web-scraping)
+  - [2 - Load historical data](#2---load-historical-data)
+  - [3 - Data Visualization](#3---data-visualization)
+- [Trading Strategies](#trading-strategies)
+  - [Strategy 1 - Momentum Strategy](#strategy-1---momentum-strategy)
+  - [Strategy 2 - Moving Averages](#strategy-2---moving-averages)
+  - [Strategy 3 - Moving Averages Cross-Over](#strategy-3---moving-averages-cross-over)
+- [Authors](#authors)
 
 ## General Information
 
@@ -21,7 +32,7 @@ Cryptocurrencies, such as Bitcoin and Ethereum, have gained significant attentio
 
 ## Technologies
 * You can open the file in any IDE ??????
-* Libraries used: `pandas`, `BeautifulSoup`, `requests`, `yfinance`, `date`, `matplotlib.pyplot`, `numpy`, `ipywidgets`
+* Libraries used: `pandas`, `BeautifulSoup`, `requests`, `yfinance`, `date`, `matplotlib.pyplot`, `numpy`, `ipywidgets`, `plotly`
 
 If a library is not installed by default, the following command needs to be run:
 ```
@@ -29,14 +40,14 @@ If a library is not installed by default, the following command needs to be run:
 ```
 
 ## Program Structure
-### Chapter 1: Web scraping
+### 1 - Web Scraping
 We recommend to use the package `BeautifulSoup` to scrap the data from the website. By identifying the structure of the url, we can create a function that will scrap data from selected date. In our case we will scrap data from the day before.
 
-### Chapter 2: Load historical data
+### 2 - Load historical data
 In the last step, we loaded general data about the top 20 cryptocurrencies such as Name, Symbol, Market Capitalisation, Price and Volume in the last 24h.
 In the following step we will load historical data of these cryptos using the package `yfinance` 
 
-### Chapter 3: Data Visualization
+### 3 - Data Visualization
 This part will give the user an overview of the data that we just loaded by creating:
 * A pie chart to show the biggest actors of the crypto environment 
 * A bar chart to show the most traded coins in the last 24h
@@ -44,7 +55,11 @@ This part will give the user an overview of the data that we just loaded by crea
 
 *The Visualizations can be found here:*
 
-### Chapter 4: Momentum Strategy
+Having shown the basics of the crypto environment, we will now turn our focus to developing trading strategies for maximizing returns in this exciting and dynamic market.
+
+## Trading Strategies
+
+### Strategy 1 - Momentum Strategy
 There is a common saying in the stock markets that indicates that stocks that went high, tend to go higher for a while. This is called momentum. As buyer pile in to make sure to profit from the uptrend, the price of a stock (in our case cryptocurrency) will tend to keep rising for a bit. Below we will construct a long short porfolio that takes into account the rank of each crypto-currency in the last 10 days and will decide to go long or short for the following 10 day period if the crypto was ranked approprietly. 
 
 In other words, we will compare the performance of our coins in the last 10 days. We will buy (long position) the two best performers and sell (short position) the two worst performers. In mathematical terms:
@@ -67,7 +82,7 @@ Our 1$ investment returned 16$ which is a 74% annualized return! This looks like
 
 In conclusion, we don't have strong evidence that this strategy really works or if it is pure luck. Therefore we will look at the next strategy
 
-### Chapter 5: Moving Averages strategy
+### Strategy 2 - Moving Averages
 
 As seen previously, momentum yields some result but it is hard to say if the strategy is really outperforming individual coins. Moreover, as USDT (a stable coin) was included in our dataset, it might have acted as a "safe haven" during crypto crashes. We therefore want to display another strategy that might be profitable against individual coins.
 
@@ -83,7 +98,14 @@ We will compare the close value of a coin to its moving average (20 to 200 days 
 
 The user will be able to select a crypto and the parameter of the moving average and compare this strategy with a long-only strategy on the coin.
 
-### Chapter 6: Moving Averages Cross-Over
+### Strategy 3 - Moving Averages Cross-Over
 Let's look at a last strategy called the Moving Average Cross-Over
 
 For this part we want to analyze if we can profit from a strategy where we go long the selected cryptocurrency when the fast moving average (20 SMA) is above the slower moving average (50 SMA). The rationale behind this strategy is that when the faster moving average is above the slower one, we can conclude that there is a confirmed uptrend from which we can profit. When the faster moving average is below the slower one, it might indicates the beginning of a downtrend where we do not want to hold a position.
+
+## Authors
+Loïc Mathys
+
+Nikola Golubovic
+
+Noah Nolè
