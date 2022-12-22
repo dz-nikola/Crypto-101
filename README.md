@@ -53,8 +53,6 @@ This part will give the user an overview of the data that we just loaded by crea
 * A bar chart to show the most traded coins in the last 24h
 * A line chart to show the historical prices of the coins
 
-*The Visualizations can be found here:*
-
 Having shown the basics of the crypto environment, we will now turn our focus to developing trading strategies for maximizing returns in this exciting and dynamic market.
 
 ## Trading Strategies
@@ -72,7 +70,7 @@ We will keep the position for a period of 10 days. After that we will look at th
 
 **What would have happenned if we had invested 1$ on December 21st 2017 and implementated this strategy until now ?**
 
-SHOW GRAPH HERE
+[SEE GRAPH]
 
 Our 1$ investment returned 16$ which is a 74% annualized return! This looks like an incredible startegy but let's be a little bit critical about that:
 
