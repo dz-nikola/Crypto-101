@@ -70,7 +70,7 @@ We will keep the position for a period of 10 days. After that we will look at th
 
 **What would have happenned if we had invested 1$ on December 21st 2017 and implementated this strategy until now ?**
 
-[SEE GRAPH](Portfolio Amount - Momentum Strategy.png)
+[SEE GRAPH](Crypto-101/Portfolio_amount_momentum.png)
 
 Our 1$ investment returned 16$ which is a 74% annualized return! This looks like an incredible startegy but let's be a little bit critical about that:
 
