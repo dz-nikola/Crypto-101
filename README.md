@@ -31,7 +31,7 @@ Cryptocurrencies, such as Bitcoin and Ethereum, have gained significant attentio
 * `Moving Averages Cross-Over`
 
 ## Technologies
-* You can open the file in any IDE ??????
+* We used Google Colab to run the notebook
 * Libraries used: `pandas`, `BeautifulSoup`, `requests`, `yfinance`, `date`, `matplotlib.pyplot`, `numpy`, `ipywidgets`, `plotly`
 
 If a library is not installed by default, the following command needs to be run:
