@@ -1,8 +1,8 @@
 # Crypto-101
 
-Welcome to Crypto 101! In this project, our goal is to introduce you to the exciting world of cryptocurrencies and provide you with the tools and knowledge you need to get started in the world of crypto trading. What are the biggest cryptos? How their prices fluctuate? Is there a good trading strategy? These questions will be answered in this project.
+Welcome to Crypto 101! Our goal is to introduce you to the exciting world of cryptocurrencies and give you the tools and knowledge you need to get started in the craft of crypto trading. What are the major cryptocurrencies? How do their prices fluctuate? Is there a good trading strategy? These are the questions that will be answered in this project.
 
-Whether you are a complete beginner or have some familiarity with crypto, we believe that Crypto 101 has something to offer for everyone. So grab your virtual notebook and let's dive in!
+Whether you are a complete beginner or already know a bit about cryptocurrencies, we believe that Crypto 101 has something to offer for everyone. So grab your virtual notebook and let's dive in!
 
 *This project is part of the course "Skills: Programming - advance level" by Mario Silic at the University of St. Gallen.*
 
@@ -18,20 +18,21 @@ Whether you are a complete beginner or have some familiarity with crypto, we bel
   - [Strategy 2 - Moving Averages](#strategy-2---moving-averages)
   - [Strategy 3 - Moving Averages Cross-Over](#strategy-3---moving-averages-cross-over)
 - [Authors](#authors)
+- [Code](#code)
 
 ## General Information
 
-For our project we wanted to create an all-in-one place where the user can discover a few things about cryptocurrencies. 
+For our project, we wanted to create an all-in-one place where users can discover for themselves a few things about cryptocurrencies. 
 
-We will first display some interesting numbers and chart about the top 20 cryptos by using data that will be scrapped from [Coinmarketcap](https://coinmarketcap.com/)
+We will first show some interesting numbers and charts about the top 20 cryptocurrencies by using data that comes from [Coinmarketcap](https://coinmarketcap.com/).
 
-Cryptocurrencies, such as Bitcoin and Ethereum, have gained significant attention in recent years due to their potential as an alternative asset class and their use in decentralized finance (DeFi) applications. With their increasing popularity in the last couple of years, cryptocurrencies have provided investors with very profitable returns (but also very volatile!). In order to understand a bit more about those strategies, we will use 3 strategies:
+In recent years, cryptocurrencies such as Bitcoin and Ethereum have attracted significant attention due to their potential as an alternative asset class and their use in decentralized financial applications (DeFi). With their increasing popularity in recent years, cryptocurrencies have provided investors with very lucrative returns (but also very volatile!). To learn a little more about these trading strategies, we will cover 3 of them:
 * `Momentum`
 * `Moving Averages`
 * `Moving Averages Cross-Over`
 
 ## Technologies
-* We used Google Colab to run the notebook
+* We used Google Colab to run the notebook. We highly recommend our users to run the code on Google Colab as well. Please find the link to our Code below.
 * Libraries used: `pandas`, `BeautifulSoup`, `requests`, `yfinance`, `date`, `matplotlib.pyplot`, `numpy`, `ipywidgets`, `plotly`
 
 If a library is not installed by default, the following command needs to be run:
@@ -41,11 +42,11 @@ If a library is not installed by default, the following command needs to be run:
 
 ## Program Structure
 ### 1 - Web Scraping
-We recommend to use the package `BeautifulSoup` to scrap the data from the website. By identifying the structure of the url, we can create a function that will scrap data from selected date. In our case we will scrap data from the day before.
+We recommend using the `BeautifulSoup` package to retrieve the data from the website. By identifying the structure of the URL, we can create a function that fetches data from a specific date. In our case, we will scrape the data from the previous day.
 
 ### 2 - Load historical data
-In the last step, we loaded general data about the top 20 cryptocurrencies such as Name, Symbol, Market Capitalisation, Price and Volume in the last 24h.
-In the following step we will load historical data of these cryptos using the package `yfinance` 
+As a final step, we have loaded general data about the top 20 cryptocurrencies, such as name, symbol, market capitalization, price and volume in the last 24 hours.
+The following stage is where we will load historical data of these cryptocurrencies using the "yfinance" package 
 
 ### 3 - Data Visualization
 This part will give the user an overview of the data that we just loaded by creating:
@@ -58,7 +59,7 @@ Having shown the basics of the crypto environment, we will now turn our focus to
 ## Trading Strategies
 
 ### Strategy 1 - Momentum Strategy
-There is a common saying in the stock markets that indicates that stocks that went high, tend to go higher for a while. This is called momentum. As buyer pile in to make sure to profit from the uptrend, the price of a stock (in our case cryptocurrency) will tend to keep rising for a bit. Below we will construct a long short porfolio that takes into account the rank of each crypto-currency in the last 10 days and will decide to go long or short for the following 10 day period if the crypto was ranked approprietly. 
+There is a common saying in the stock markets that indicates that stocks that went high, tend to go higher for a while. This is called momentum. As buyer pile in to make sure to profit from the uptrend, the price of a stock (in our case cryptocurrency) will tend to keep rising for a bit. Below we will construct a long short porfolio that takes into account the rank of each crypto-currency in the last 10 days and will decide to go long or short for the following 10-day period if the crypto was ranked approprietly. 
 
 In other words, we will compare the performance of our coins in the last 10 days. We will buy (long position) the two best performers and sell (short position) the two worst performers. In mathematical terms:
 
@@ -82,13 +83,13 @@ In conclusion, we don't have strong evidence that this strategy really works or 
 
 ### Strategy 2 - Moving Averages
 
-As seen previously, momentum yields some result but it is hard to say if the strategy is really outperforming individual coins. Moreover, as USDT (a stable coin) was included in our dataset, it might have acted as a "safe haven" during crypto crashes. We therefore want to display another strategy that might be profitable against individual coins.
+As seen previously, momentum yields some results but it is hard to say if the strategy is really outperforming individual coins. Moreover, as USDT (a stable coin) was included in our dataset, it might have acted as a "safe haven" during crypto crashes. We therefore want to display another strategy that might be profitable against individual coins.
 
 To do that, we have seen that first of all cryptos were really cylcical and that long period of outperformance could be followed by very long period of negative returns.
 
-In order to profit from trending periods and to stay out of turbulent times, we have designed different strategies based on moving averages were the user can choose his/hers favorite crypto as well as a moving average and can see the result of the strategy in a simple graph.
+In order to profit from trending periods and to stay out of turbulent times, we have designed different strategies based on moving averages were the user can choose his/her favorite crypto as well as a moving average and can see the result of the strategy in a simple graph.
 
-The Moving average strategy works as follow:
+The Moving average strategy works as follows:
 
 We will compare the close value of a coin to its moving average (20 to 200 days moving average)
 * If Close > MA : We are long
@@ -107,3 +108,8 @@ Loïc Mathys
 Nikola Golubovic
 
 Noah Nolè
+
+## Code
+Link to our Google Colab with the code and comments included:
+
+https://colab.research.google.com/drive/1nQPAk02Ng6FskEwP3TdnfcRY946bsxLr?usp=sharing#scrollTo=dIsGTYp0YoVW 
