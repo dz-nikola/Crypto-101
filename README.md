@@ -58,6 +58,8 @@ Having shown the basics of the crypto environment, we will now turn our focus to
 
 ## Trading Strategies
 
+**Disclaimer**: Our trading strategies did not consider the timing of trades. However, timing is a crucial factor in realizing returns, as it can have a significant impact on the success or failure of a trade. It is important to consider timing when evaluating the effectiveness of our trading strategies, as it can play a major role in determining their success or failure. The big discrepance between the the return of our moving-average cross-over strategy can be explained by the good timing as well as by profiting from getting out before the happening of the huge crypto crash in 2022. Lastly, the trading costs were not considered.
+
 ### Strategy 1 - Momentum Strategy
 There is a common saying in the stock markets that indicates that stocks that went high, tend to go higher for a while. This is called momentum. As buyer pile in to make sure to profit from the uptrend, the price of a stock (in our case cryptocurrency) will tend to keep rising for a bit. Below we will construct a long short porfolio that takes into account the rank of each crypto-currency in the last 10 days and will decide to go long or short for the following 10-day period if the crypto was ranked approprietly. 
 
